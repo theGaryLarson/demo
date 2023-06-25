@@ -10,4 +10,4 @@ on:
         required: true
 jobs:
   build-and-test:
-    echo Define your CI job steps here
+    run: echo "Define your CI job steps here"
