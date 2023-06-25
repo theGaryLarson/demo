@@ -10,7 +10,7 @@ jobs:
   learn-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out $default-branch
+      - name: Check out "main"
         uses: actions/checkout@v3
 
       - name: Run Learn-github-actions
