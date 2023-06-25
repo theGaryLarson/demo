@@ -13,5 +13,4 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run CI
-        run: |
-          # Run your CI commands here
+        uses: ./.github/workflows/ci.yml
