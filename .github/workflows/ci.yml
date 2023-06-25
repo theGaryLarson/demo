@@ -1,5 +1,13 @@
 name: Continuous Integration
-
+on:
+  workflow_call:
+    inputs:
+      config-path:
+        required: true
+        type: string
+    secrets:
+      token:
+        required: true
 jobs:
   build-and-test:
   # Define your CI job steps here
