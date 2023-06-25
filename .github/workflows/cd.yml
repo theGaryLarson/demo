@@ -2,7 +2,21 @@ name: Continuous Deployment
 
 jobs:
   deploy-to-staging:
-  # Define your deployment steps for staging environment here
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run CD for Staging
+        run: |
+          # Perform deployment steps for the staging environment
 
   deploy-to-production:
-  # Define your deployment steps for production environment here
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run CD for Production
+        run: |
+          # Perform deployment steps for the production environment
