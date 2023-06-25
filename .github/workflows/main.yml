@@ -1,0 +1,33 @@
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - $default-branch
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run CI
+        uses: ./.github/workflows/ci.yml
+  learn:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out $default-branch
+        uses: actions/checkout@v3
+
+      - name: Run Learn-github-actions
+        uses: ./.github/workflows/learn-github-actions.yml
+
+
+#  cd:
+#    needs: [ci]
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v3
+#
+#      - name: Run CD
+#        uses: ./.github/workflows/cd.yml
