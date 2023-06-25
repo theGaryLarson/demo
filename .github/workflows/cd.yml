@@ -1,13 +1,5 @@
 name: Continuous Deployment
 
-#on:
-#  push:
-#    branches:
-#      - $default-branch
-#  pull-request:
-#    branches:
-#      - $default-branch
-
 jobs:
   deploy-to-staging:
   # Define your deployment steps for staging environment here
